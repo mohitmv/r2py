@@ -30,7 +30,7 @@ tests_require = [
 
 
 dependency_links = [
-	"https://github.com/mohitmv/msl/archive/v1.0.0.tar.gz"
+	"https://github.com/mohitmv/msl/archive/v1.0.0.tar.gz#egg=msl-1.0.0"
 ]
 
 
@@ -79,6 +79,9 @@ setup(
 		# ],
 	},
 	extras_require=extras_require,
+	install_requires = [
+		"msl==1.0.0"
+	], 
 	dependency_links = dependency_links, 
 	tests_require=tests_require,
 	cmdclass={'test': PyTest},

@@ -1,3 +1,4 @@
+msl==1.0.0
 
 [:python_version == "2.6" or python_version == "2.7" or python_version == "2.5" ]
 argparse>=1.2.1

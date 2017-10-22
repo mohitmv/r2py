@@ -1,1 +1,1 @@
-https://github.com/mohitmv/msl/archive/v1.0.0.tar.gz
+https://github.com/mohitmv/msl/archive/v1.0.0.tar.gz#egg=msl-1.0.0
