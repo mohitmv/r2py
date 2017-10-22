@@ -1,8 +1,3 @@
-
-It is for linux only.
-R must be installed. linux command "r" must work.
-
-
 import r2py
 
 r2py.configs.log_file = "/tmp/r2py.logs"; # Same as default log file

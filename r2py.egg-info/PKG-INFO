@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: r2py
+Version: 1.0.0
+Summary: r2py
+Home-page: http://stillhungry.in/
+Author: Mohit Saini
+Author-email: mohitsaini1196@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/mohitmv/r2py
+Description: Convert R code into Python
+Platform: UNKNOWN
+Classifier: First Version Released - Production/Stable

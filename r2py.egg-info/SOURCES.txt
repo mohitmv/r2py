@@ -1,0 +1,7 @@
+setup.py
+r2py/__init__.py
+r2py.egg-info/PKG-INFO
+r2py.egg-info/SOURCES.txt
+r2py.egg-info/dependency_links.txt
+r2py.egg-info/requires.txt
+r2py.egg-info/top_level.txt
