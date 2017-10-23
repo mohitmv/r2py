@@ -31,8 +31,12 @@ tests_require = [
 
 dependency_links = [
 	"git+git://github.com/mohitmv/msl@v1.0.0#egg=msl-1.0.0"
-]
+];
 
+
+install_requires = [
+	"msl==1.0.0"
+];
 
 # Conditional dependencies:
 
@@ -79,9 +83,7 @@ setup(
 		# ],
 	},
 	extras_require=extras_require,
-	install_requires = [
-		"msl==1.0.0"
-	], 
+	install_requires = install_requires, 
 	dependency_links = dependency_links, 
 	tests_require=tests_require,
 	cmdclass={'test': PyTest},

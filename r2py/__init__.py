@@ -340,7 +340,6 @@ def clean_tree2(subtree, tree_type):
 						return dict(token="FUNCTION_CALL", children=[dict(token="raw_text", text="assign", children=[]), [[clean_tree2(children[0], "expr")], [clean_tree2(children[2], "expr")]]]);
 
 			if(subexpr == None):
-				print subtree;
 				1/0;
 
 			if(tree_type == "inst"):
@@ -457,31 +456,31 @@ def get_str1(subtree):
 
 
 
-def test(input_file="student.r"):
-	input_and_init(input_file);
-	create_graph();
-	topological_sorting();
-	create_parent_relation();
-	write_file("test_parsed_tree.data.py", get_str(indexed_parsed_code[0]));
-	write_file("test_parsed_tree.data1.py", json.dumps(get_str1(indexed_parsed_code[0])));
-	tree1 = clean_tree1(indexed_parsed_code[0]);
+# def test(input_file="student.r"):
+# 	input_and_init(input_file);
+# 	create_graph();
+# 	topological_sorting();
+# 	create_parent_relation();
+# 	write_file("test_parsed_tree.data.py", get_str(indexed_parsed_code[0]));
+# 	write_file("test_parsed_tree.data1.py", json.dumps(get_str1(indexed_parsed_code[0])));
+# 	tree1 = clean_tree1(indexed_parsed_code[0]);
 
-	# print tree1;
+# 	# print tree1;
 
-	ans = clean_tree2(tree1, "inst");
+# 	ans = clean_tree2(tree1, "inst");
 
-	ans = state.global_functions + ans;
+# 	ans = state.global_functions + ans;
 
-	# print tree1;
+# 	# print tree1;
 
-	# print "ans =";
-	# for i in ans:
-	# 	print i;
-	# print "ans-end";
+# 	# print "ans =";
+# 	# for i in ans:
+# 	# 	print i;
+# 	# print "ans-end";
 
-	ans1 = list(tree2py(i) for i in ans);
+# 	ans1 = list(tree2py(i) for i in ans);
 
-	print_py(ans1);
+# 	print_py(ans1);
 
 
 
@@ -510,23 +509,24 @@ def r2py_recursive(inp, outp, limit=100000):
 	all_files = Help.list_file_recursive(inp);
 	for i in all_files[:limit]:
 		if(i.split(".")[-1].lower() == "r"):
-			outp_file = outp+i[len(inp):];
+			outp_file = outp+i[len(inp):]+".py";
 			if(not(os.path.isdir(os.path.dirname(outp_file)))):
 				os.makedirs(os.path.dirname(outp_file));
-			r2py(inp+i, outp_file);
+			# print i, outp_file;
+			r2py(i, outp_file);
 
 
-def script():
-	all_files = Help.list_files("../assignments/assign2_clean_r/");
-	print all_files;
-	faltu_files = ["20915.R", "26694.R", "29280.R", "8938.R"];
-	# faltu_files = ["73118.R", "9010.R"];
-	for i in all_files[99:]:
-		if(i.split(".")[-1] == "R" and i not in faltu_files):
-			print time.time();
-			r2py("../assignments/assign2_clean_r/"+i, "../assignments/assign2_py/"+i.split(".")[0]+".py");
-	print time.time();
-	print "Done - All";
+# def script():
+# 	all_files = Help.list_files("../assignments/assign2_clean_r/");
+# 	print all_files;
+# 	faltu_files = ["20915.R", "26694.R", "29280.R", "8938.R"];
+# 	# faltu_files = ["73118.R", "9010.R"];
+# 	for i in all_files[99:]:
+# 		if(i.split(".")[-1] == "R" and i not in faltu_files):
+# 			print time.time();
+# 			r2py("../assignments/assign2_clean_r/"+i, "../assignments/assign2_py/"+i.split(".")[0]+".py");
+# 	print time.time();
+# 	print "Done - All";
 
 
 
