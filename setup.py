@@ -30,7 +30,7 @@ tests_require = [
 
 
 dependency_links = [
-	"git+git://github.com/mohitmv/msl@v1.0.0#egg=msl-1.0.0"
+	"git+https://github.com/mohitmv/msl"
 ];
 
 
