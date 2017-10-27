@@ -35,7 +35,7 @@ dependency_links = [
 
 
 install_requires = [
-	"msl==1.0.0"
+	"msl"
 ];
 
 # Conditional dependencies:
