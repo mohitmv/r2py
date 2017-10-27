@@ -90,6 +90,7 @@ setup(
 	classifiers=[
 		'First Version Released - Production/Stable',
 	],
+	include_package_data=True, 
 )
 
 
