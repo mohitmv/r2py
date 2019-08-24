@@ -1,17 +1,15 @@
+## About
+R2py is a Python library to convert any R program to Python program.
 
-It is for linux only.
-R must be installed. linux command "r" must work.
+## Possible Use Cases
+- To test plagiarism between among R programs using standard plagiarism testing tools like MOSS, which don't support R language.
+- To integrte a R utility with rest of Python backend.
 
-
+## How to use ?
+```python
 import r2py
-
-r2py.configs.log_file = "/tmp/r2py.logs"; # Same as default log file
-
-r2py.r2py("sample_input_file_path.R", "sample_output_file_path.py");
-
-print "\n\nsample_output_file_path.py file must have been created...\n\n";
-
-if(False):
-	r2py.r2py_recursive("input_folder_path/", "output_folder_path/");
-print """\n\n r2py_recursive would have created 'output_folder_path' folder, having same directry tree structure as 'input_folder_path' but convered py files in place of R files \n\n\n""";
+r2py.convert("programs/my_program.R", "programs/my_program.py");
+```
+## Copyright
+Copyright (c) 2017-2019 Mohit Saini (mohitsaini1196@gmail.com). All rights reserved.
 
