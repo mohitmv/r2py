@@ -10,6 +10,3 @@ R2py is a Python library to convert any R program to Python program.
 import r2py
 r2py.convert("programs/my_program.R", "programs/my_program.py");
 ```
-## Copyright
-Copyright (c) 2017-2019 Mohit Saini (mohitsaini1196@gmail.com). All rights reserved.
-
